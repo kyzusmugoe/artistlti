@@ -1,0 +1,31 @@
+div(class="tools")
+	nav(class="navBar") 
+		div(class="navContainer")
+			div(class="leftBox")
+				a(href="./index.html") 賴唐鴉家庭美術館
+			
+			div(class="rightBox")
+				include menu.pug
+
+				div.m_toggle.kart.k_btn.m_toggle 
+					i(class="fa fa-shopping-cart" aria-hidden="true")
+					span(class="counter") 99
+
+				if page == "index"
+					div.m_toggle.login_btn
+						i(class="fa fa-user" aria-hidden="true")
+				else
+					div.m_toggle.u_btn
+						i(class="fa fa-user" aria-hidden="true")
+
+				div.m_menu
+					div 
+					div 
+					div     
+						   
+	include mobileMenu.pug
+	include kartMenu.pug
+	include userMenu.pug
+	include loginMenu.pug
+	include registMenu.pug
+	include forgetMenu.pug

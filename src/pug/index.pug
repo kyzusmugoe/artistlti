@@ -1,0 +1,75 @@
+﻿include ./comp/config.pug
+
+doctype html
+html
+  include ./comp/header.pug
+  body
+    +nav("index")
+    
+    div(class="mainBanner")
+      include ./comp/banner.pug
+      div(class="logo")
+        img( loading="lazy" src=imgPath+"logo_txt.svg" class="preload" rel="preload" )     
+    div.bg1
+      div.blocker.block-1-1.underLine
+        div.content.LR 
+          div
+            div(class="photo left orange2")
+              img( loading="lazy" src=imgPath+"p1-1.jpg") 
+          div
+            section 
+              span 一方生態盈溢、蟲鳴鳥叫的莊園，還有一缸缸天然釀造的手工醋
+              h2 美，就在日常生活的點點滴滴裡
+              a.btn.white More
+              
+      div.blocker.block-1-2
+          div.content.LR.reverse
+            div
+              div(class="photo right yellow")
+                img( loading="lazy" src=imgPath+"p1-2.jpg") 
+            div
+              section
+                span 只要邊角料就夠用了，人生沒有想賺大錢，肉幼仔就可以過得很好
+                p 喜酌人生的 酸甘蜜甜
+
+    div.blocker.fitBorder.block-1-3
+      div.content
+        div(class="title")
+          span.main 商品
+          span 一缸缸的「唐婆醋」，是藝術、人文、科技的結晶
+        div.prodList
+          - var n = 0;            
+          while n < 5
+            -var imgName = "event-"+ (n%4 +1)+".jpg"
+            div.box(data-loop=n++, style=`background-image:url(${imgPath+imgName})`) 
+              div.txt
+                span.main 2021 苗栗陶藝術節!{n}
+                span 一月行程
+    
+    div.blocker.fitBorder.block-1-4
+      div.content
+        div(class="title")
+          span.main 商品
+          span 一缸缸的「唐婆醋」，是藝術、人文、科技的結晶
+        div.prodList
+          - var n = 0;            
+          while n < 5
+            -var imgName = "event-"+ (n%4 +1)+".jpg"
+            div.box(data-loop=n++, style=`background-image:url(${imgPath+imgName})`) 
+              div.txt
+                span.main 2021 苗栗陶藝術節!{n}
+                span 一月行程
+
+        div.footer
+          a.btn.main.fill 更多
+    
+
+    include ./comp/footer.pug
+    
+
+
+
+
+    
+    
+    

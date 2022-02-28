@@ -1,0 +1,34 @@
+- var imgPath = "./images/";
+mixin nav(page)
+  include nav.pug 
+
+doctype html
+html
+  include header.pug
+  body
+    +nav("media")
+    div.blocker.top
+      div.content  
+        div(class="pageTitle underLine" ) 
+          h1 【台灣真善美】"橘園二代"新世代挑戰
+          h4 2022-01-01
+
+          div.vedio(style="float: none;clear: both; width: 100%;position:relative;padding-bottom:56.25%")
+            iframe(style="position:absolute;width:100%;height:100%;top:0;left:0" src="https://www.youtube.com/embed/6nBvdf1fNXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          article  
+            blockquote 青年返鄉接下傳承的擔子，黃文業、黃文詣兄弟檔共同創立了「橘二代」，用巧思在包裝上推陳出新，兼顧可口的茂谷柑品質，採用草生栽培的友善農法，再透過行銷翻轉偏鄉農產的命運，讓更多消費者認識大湖的茂谷柑。
+            p 苗栗大湖有一對黃文業、黃文詣兄弟檔，因為父母相繼開刀，先後返鄉接手家裡的橘子園，一個管理田間，一個負責行銷，還自創品牌賣橘子。弟弟黃文詣點子特別多，他跳脫傳統賣橘子的方式，復刻過去採收橘子的木箱，放進精品等級的茂谷柑，做成精緻禮盒，提昇農產價值。不只如此，他們還集結當地年輕人的力量，組成聯盟共同行銷，希望為農村帶來改變，讓更多人願意回到農村成家立業。
+            p 「回家是必然的路，我想傳承、延續農產品的生命，共享品牌經驗。」黃氏兄弟文業、文詣懷抱著理想與堅持，與夥伴一起創立了返青富民聯盟，聯合各種有特色的農作物、麵包坊，要為農村帶來改變，打造共好共榮的青創聚落，讓更多青年願意回到農村，一起為了這塊土地努力！
+            p 橘二代的果園從爸爸開始就是使用草生栽培方式耕作，這邊的橘子園以前是荒廢的土地，很多竹雜樹，剛開始種的時候比較辛苦，因爸爸的理念，認為除草劑對人與環境都很不好，不喜歡除草劑，所以從小兩兄弟的休閒娛樂（被迫的～）就是幫忙除草。
+            p 文詣也算給我們看，如果使用除草劑的話，一年只要除兩次草，且大量噴灑藥的方式，一次只要一天即可完成。而不使用除草劑的話，一年需要除六次草，一次需要四天，等於工時是使用除草劑的12倍！雖然人工除草、草生栽培的成本非常高，但堅持要守護人與土地的心，也讓他們種出能讓消費者安心吃的柑橘。
+          a.btn.orange(href="./prod.html") Back
+
+    include footer.pug
+    
+
+
+
+
+    
+    
+    

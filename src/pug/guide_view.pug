@@ -1,0 +1,53 @@
+include ./comp/config.pug
+
+doctype html
+html
+  include ./comp/header.pug
+  body
+    +nav("guide")
+    include ./comp/formMenu.pug
+
+    div.blocker.top.underLine
+      div.content.LR.prod
+        div.limit
+          +gallery('prod', 'guide')
+        div 
+          section 
+            h3 青創基地-親子烘焙
+            hr              
+            h4 你可以來一場不一樣的下午茶時光
+            p 青創基地擁有優質烘焙環境與設備，優質的師資細心教你一步步親手烘焙美味甜點。揪樓上樓下的好厝邊、姊妹淘、家人或是同事一起來手作甜點，享受著五星級的烘焙教室及設備，完成後，還可以坐下來喝杯咖啡
+            p 從法式、日式甜點出發，到各種變化多端進而延伸出來的創意甜點，跟著老師的示範，全程自己動手做，讓記憶更深刻，回家便能輕鬆的做出一樣的甜點。
+
+            h4 課程內容
+            ul
+              li 小山園抹茶覆盆子 & 綜合堅果費南雪 （示範）
+              li 名為金磚蛋糕的費南雪，充滿濃濃杏仁味，搭配上榛果香氣的奶油，一口接一口
+              li 佛羅倫丁杏仁餅乾（實作）
+              li 一款絕對秒殺的餅乾，香脆的杏仁片 & 焦糖香氣
+              li 奶油香味的餅乾酥底，令人無法節制
+              li 酸檸檬洋果子（實作）
+              li 介於磅蛋糕與海綿蛋糕之間，淋上上表層散發濃濃檸檬香氣、酸甜可口的細緻香氣的檸檬玻璃糖霜，令人欲罷不能
+              li 香草 & 巧克力瑪德蓮（示範）
+              li 法式平民甜點瑪德蓮，教你如何做出口感濕潤，又有完美凸肚臍的正宗瑪德蓮
+
+            h4 可帶回成品：
+            ul
+              li 費南雪 6 個（兩種口味各 3 個）
+              li 佛羅倫丁杏仁餅乾 4 x 4 cm 約 10 片
+              li 酸檸檬洋果子 6 個
+              li 大瑪德蓮 4 個（兩種口味各 2 個）
+            h4 授課老師：ADA 老師
+
+          div
+            span.money NT$ 5,999 元
+            button.btn.red.buy.f_menu 我要預約 
+            
+
+    div.blocker
+      div.content
+        a.btn.red(href="./guide.html") 回上頁
+
+    include ./comp/footer.pug
+
+

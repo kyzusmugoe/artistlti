@@ -1,0 +1,44 @@
+include ./comp/config.pug
+
+doctype html
+html
+  include ./comp/header.pug
+  body
+    +nav("prod")
+    
+    div.blocker.block-2-1.top
+      div.content.LR.prod
+        div.limit
+          +gallery('prod', 'prod')
+        div 
+          section 
+            h3 銅鑼窯 柴燒小茶杯(單杯) cup 
+            hr              
+            p 以手拉坯成型，上釉後燒製瓦斯窯燒至1200度以上。以手拉坯成型，上釉後燒製瓦斯窯燒至1200度以上。以手拉坯成型，上釉後燒製瓦斯窯燒至1200度以上。以手拉坯成型，上釉後燒製瓦斯窯燒至1200度以上。
+            P 因釉色變化大，使每個杯子顏色呈現不同風貌(圖片僅供參考) 。  因釉色變化大，使每個杯子顏色呈現不同風貌(圖片僅供參考) 。 因釉色變化大，使每個杯子顏色呈現不同風貌(圖片僅供參考) 。 
+          div
+            span.money NT$ 1,999 
+            a(href="./cart_list").btn.red.buy 我要購買
+
+    div.blocker.bgShop
+      div.content.underLine.LR.reverse
+        div
+          div.photo
+            img( loading="lazy" src=imgPath+"photo1.jpg") 
+        div
+          section 
+            div.title.left
+              span.red lo ieuˇ congˇ
+              h2 產品說明
+              ul 
+                li 尺寸：約長3.5 寬 3.5 高3cm
+                li 材質：陶
+                li 出貨包裝尺寸：一組/一杯+一盒
+                li 出貨規格：8*6*6cm
+                li 產地：台灣設計
+      
+    div.blocker.bgShop
+      div.content
+        a.btn.red(href="./guide.html") 回上頁
+
+    include ./comp/footer.pug

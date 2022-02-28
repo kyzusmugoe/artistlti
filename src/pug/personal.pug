@@ -1,0 +1,50 @@
+include ./comp/config.pug
+
+doctype html
+html
+  include ./comp/header.pug
+  body    
+    +nav("story")
+    +sideBanner('個人資料維護', 'ge-nginˇ ziiˊ-liau viˇ-fu' ,'./images/storyBanner.jpg')
+
+    div(class="blocker" )
+      div(class="content short" ) 
+        div(class="title")
+          //-span.red ge-nginˇ ziiˊ-liau viˇ-fu
+          span.main 個人資料維護
+        div(class="box")
+            form(action="") 
+              div.form-group
+                label 姓名
+                input.form-control(placeholder="王大明")
+                label 信箱
+                input.form-control(placeholder="ming.wang@gmail.com")
+                label 電話
+                input.form-control(placeholder="0912345678")
+          
+        div.footer
+          a.btn.red 確認修改
+
+    div(class="blocker" )
+      div(class="content short" ) 
+        div(class="title")
+          //-span.red med maˊ xiuˊ goiˋ
+          span.main 密碼修改
+        div(class="box")
+            form(action="") 
+              div.form-group
+                input.form-control(type="password", placeholder="舊密碼")
+                input.form-control(type="password", placeholder="新密碼")
+                input.form-control(type="password", placeholder="新密碼-再次確認")          
+        div.footer
+          a.btn.red 確認修改
+           
+    include ./comp/footer.pug
+    
+
+
+
+
+    
+    
+    

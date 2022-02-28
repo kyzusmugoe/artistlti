@@ -1,0 +1,49 @@
+include ./comp/config.pug
+
+doctype html
+html
+  include ./comp/header.pug
+
+  body
+    +nav("prod") 
+
+    div.sideBanner
+      div.content.PS(data-speed="1.5" data-distance="80")
+        img.preload(src="./images/prodBanner.jpg" loading="lazy" rel="preload" )
+      div.logo
+        span.white vunˇ congˋ songˊ pinˋ
+        h2 文創商品
+
+    div.blocker.bgShop
+      div.content
+        div.cards
+          - var n = 0;            
+          while n < 14
+            div
+              a(href="./prod_view.html")
+                figure.shop(data-loop=n++)  
+                  -var imgName = "shop"+ (n%4+1)+".jpg"
+                  div.f-box(style={'background-image':'url('+imgPath+imgName+')'})            
+                  div.icon
+                    i.fa.fa-shopping-cart(aria-hidden="true")             
+                  figcaption
+                    
+                    div.prodTitle
+                      span 柴燒小茶杯
+                        br
+                        |單杯 - 深藍釉
+                    p 以手拉坯成型，上釉後燒製瓦斯窯燒至1200度以上。 因釉色變化大，使每個杯子顏色呈現不同風貌 
+                    div.money NT$ 1,999
+        
+        div.footContainer
+          include ./comp/pager.pug
+                
+    include ./comp/footer.pug
+  
+
+
+
+
+    
+    
+    

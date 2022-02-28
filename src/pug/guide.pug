@@ -1,0 +1,37 @@
+include ./comp/config.pug
+
+doctype html
+html
+  include ./comp/header.pug
+
+  body
+    +nav("guide") 
+    +sideBanner('在地旅遊', 'cai ti liˊ iuˇ' ,'./images/prodBanner.jpg')
+
+    div.blocker.bgShop
+      div.content
+        div.cards
+          - var n = 0;            
+          while n < 14
+            div
+              a(href="./guide_view.html")
+                figure.guide(data-loop=n++)  
+                  -var imgName = "event-"+ (n%4+1)+".jpg"
+                  div.f-box(style={'background-image':'url('+imgPath+imgName+')'})  
+                  div.signUp 10/50
+                  figcaption     
+                    span 青創基地-親子烘焙
+                    span 一月行程
+        
+        div.footContainer
+          include ./comp/pager.pug
+                
+    include ./comp/footer.pug
+  
+
+
+
+
+    
+    
+    

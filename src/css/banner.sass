@@ -1,0 +1,120 @@
+@mixin banner()
+    div.mainBanner
+        //touch-action: none
+        //pointer-events: none
+        overflow: hidden
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-self: center
+        position: relative
+        @include xs
+            max-height: 700px        
+
+        div.box
+            width: 100%            
+            height: 100%
+
+        div.swiper-button-prev:after, div.swiper-button-next:after
+            color: #fff
+        .swiperBanner 
+            transform: scale(1.2)
+        .swiper-wrapper
+            //transition: .3s
+
+        .swiper-pagination
+            display: flex
+            justify-content: center
+            
+            .swiper-pagination-bullet
+                border: 2px solid #AF194A
+                --swiper-theme-color: #AF194A
+                box-sizing: content-box
+            .swiper-pagination-bullet-active
+                --swiper-theme-color: #000
+        img
+            @include imgCover()
+            
+        div.logo          
+            touch-action: none
+            pointer-events: none  
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            z-index: 1
+            p
+                font-family: 'Noto Serif TC', serif
+                color:#fff
+                font-family: Noto Serif TC
+                font-size: 24px
+                font-style: normal
+                font-weight: 600
+                line-height: 40px
+                letter-spacing: 0.3em
+                text-align: left
+
+
+            img
+                width: 300px
+                height: 300px  
+                margin-bottom: 100px 
+                object-fit: contain
+                @include xs
+                    width: 150px
+                    height: 150px  
+
+    div.mainBanner
+        max-height: 740px
+
+    div.sideBanner
+        max-height: 380px
+        .content
+            background-color: $subColor
+
+        @include xl()
+            max-height: 240px
+
+        img
+            opacity: .4
+        .logo
+            font-family: Noto Serif TC            
+            position: absolute
+            z-index: 1
+            color: #fff
+            letter-spacing: 1em
+            font-size: 2em
+            padding: 30px
+            //background: rgba(255,255,255, .8)
+            //backdrop-filter: blur(6px)
+            margin-top: 50px
+            display: flex
+            flex-direction: column
+            left: calc( 50% - 600px)
+
+            h2
+                font-weight: 500
+
+            @include xl()
+                left: 0
+                font-size: 1.3em
+                padding: 20px
+            
+            span.red //客家語標頭
+                color: #AF194A
+                font-weight: 300
+                line-height: 22px
+                letter-spacing: 0em
+                font-size: 15px
+
+            span.white //客家語標頭
+                color: white
+                font-weight: 300
+                line-height: 22px
+                letter-spacing: 0em
+                font-size: 15px
+
+                
