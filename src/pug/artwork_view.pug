@@ -1,0 +1,39 @@
+include ./comp/config.pug
+
+doctype html
+html
+  include ./comp/header.pug
+  body
+    +nav("artwork")
+    div.blocker.top.underLine
+      div.content.LR.prod
+        div.limit
+          +gallery('prod', 'artwork')
+        div 
+          section 
+            h3 手拉坏陶藝體驗課程
+            hr       
+            P 用自己做的最特別，最有成就感，每件體驗都是獨一無二的，從教學體驗、解說材質、修坏、上釉，無不用心對待，只希望每個人都能擁有屬於自己的陶器。
+            p 手拉坏機會難得，快預約報名參加體驗吧用自己的雙手造物～屬於自己手紋與溫度的陶瓷!
+            ul              
+              li 老師會教學員如何拍土&定中心 ( 對象為12歲兒童以下由老師代替完成 )
+              li 於定好中心的土團上打孔深挖
+              li 將土壁拉薄至厚薄均勻
+              li 最後變化形體，拉寬或收口等，自由造型後即完成
+              li 現場會詢問是否「郵寄宅配」或是「店面自取」。
+            p 現在的體驗釉色，粉引白、無光黑釉
+            p 粉引白白裡透粉的釉色，像是幫陶土上了粉妝，隱隱透出陶土原色及拉坏豐富的手痕，讓陶土作品有更多層次的表現！
+           
+
+          div
+            span.money NT$ 1,999 元
+            button.btn.main.fill.buy.f_menu 我要預約 
+            
+
+    div.blocker
+      div.content
+        a.btn.red(href="./artwork.html") 回上頁
+
+    include ./comp/footer.pug
+
+

@@ -1,0 +1,35 @@
+include ./comp/config.pug
+
+doctype html
+html
+  include ./comp/header.pug
+
+  body
+    +nav("artwork") 
+    +sideBanner('陶藝與書畫', '' ,'./images/artworkBanner.jpg')
+
+    div.blocker.bgShop
+      div.content
+        div.cards
+          - var n = 0;            
+          while n < 8
+            div
+              a(href="./artwork_view.html")
+                figure.guide(data-loop=n++)  
+                  -var imgName = "artwork"+ (n%4+1)+".jpg"
+                  div.f-box(style={'background-image':'url('+imgPath+imgName+')'})  
+                  figcaption     
+                    span 手拉坏陶藝體驗課程
+        
+        div.footContainer
+          include ./comp/pager.pug
+                
+    include ./comp/footer.pug
+  
+
+
+
+
+    
+    
+    

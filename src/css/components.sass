@@ -64,7 +64,7 @@
     .input.form-control
         margin-bottom: 15px
     .btn
-        font-family: Noto Serif TC
+        font-family: Microsoft JhengHei
         border: none
         font-size: 1.2em
         line-height: 1em
@@ -72,9 +72,19 @@
         justify-content: center
         align-items: center
         width: 100%
-        max-width: 125px
+        max-width: 175px
         height: 40px
-        border-radius: 10px
+        border-radius: 50px
+        &.leftIcon
+            position: relative
+            svg
+                position: absolute
+                left: 10px
+        &.rightIcon
+            position: relative
+            svg
+                position: absolute
+                right: 10px
         &:hover
             transition: .4s
 
@@ -107,17 +117,15 @@
         &.red:active
             background-color: $mainColorBtnActive
         &.white
-            justify-content: flex-start
-            padding-left: 20px
-            width: 100px
+            width: 140px
             color: white
             background: none
             border: 1px solid white
         &.white:hover
             transition: .4s
-            color: #fff
-            background-color: $mainColor
-            border: 1px solid $mainColor
+            color: $mainColor
+            background-color: #fff
+            border: 1px solid #fff
         &.white:active
             background-color: $mainColorBtnActive
 
@@ -140,13 +148,34 @@
 
     .money
         color: $mainColor
-        font-family: Noto Serif TC
-        font-size: 21px
+        font-family: Open Sans
+        font-size: 18px
         font-style: normal
         font-weight: 600
         line-height: 28px
         letter-spacing: 0em
         text-align: left
+
+    .forms     
+        width: 100%   
+        margin-right: 10px
+        @include flexbox(column, center, center )
+        form 
+            width: 100%  
+        .high
+            color:$mainColor
+
+        table
+            td, th
+                white-space: nowrap
+
+    .basic
+        div.form-group > div
+            margin-bottom: 15px
+        .address
+            .line1
+                @include flexbox(row, center, center )
+
 
 
     
@@ -159,7 +188,6 @@
         right: 10px
         z-index: 10
         background-color: $mainColor
-        border-radius: 20px
         @include flexbox(row, center, center)
         transition: .2s        
         border:1px solid  $mainColor

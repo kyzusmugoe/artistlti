@@ -22,7 +22,8 @@ module.exports = (env, options) => {
         },
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: 'js/[name].[hash].js',
+            //filename: 'js/[name].[hash].js',
+            filename: 'js/[name].js',
             clean: true,
         },
         resolve: {
@@ -57,7 +58,7 @@ module.exports = (env, options) => {
                             ]
                         },
                     }
-                },*/                
+                },*/
                 {
                     test: /.ts|tsx$/,
                     exclude: /node_modules/,
@@ -132,7 +133,7 @@ module.exports = (env, options) => {
         },
         devtool: 'source-map',
         plugins: [
-            
+
             new CleanWebpackPlugin({}),
             new webpack.HotModuleReplacementPlugin(),
             new HtmlWebpackPlugin({ filename: 'index.html', title: "wade", template: 'src/pug/index.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
@@ -141,18 +142,20 @@ module.exports = (env, options) => {
             new HtmlWebpackPlugin({ filename: 'prod_view.html', title: "wade", template: 'src/pug/prod_view.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
             new HtmlWebpackPlugin({ filename: 'guide.html', title: "wade", template: 'src/pug/guide.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
             new HtmlWebpackPlugin({ filename: 'guide_view.html', title: "wade", template: 'src/pug/guide_view.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
-            new HtmlWebpackPlugin({ filename: 'story.html', title: "wade", template: 'src/pug/story.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
-            new HtmlWebpackPlugin({ filename: 'landscape.html', title: "wade", template: 'src/pug/landscape.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
-            new HtmlWebpackPlugin({ filename: 'landscape_view.html', title: "wade", template: 'src/pug/landscape_view.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
+            new HtmlWebpackPlugin({ filename: 'couple.html', title: "wade", template: 'src/pug/couple.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
+            new HtmlWebpackPlugin({ filename: 'panorava.html', title: "wade", template: 'src/pug/panorava.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
+            new HtmlWebpackPlugin({ filename: 'artwork.html', title: "wade", template: 'src/pug/artwork.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
+            new HtmlWebpackPlugin({ filename: 'artwork_view.html', title: "wade", template: 'src/pug/artwork_view.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
             new HtmlWebpackPlugin({ filename: 'personal.html', title: "wade", template: 'src/pug/personal.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
             new HtmlWebpackPlugin({ filename: 'reserve.html', title: "wade", template: 'src/pug/reserve.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
             new HtmlWebpackPlugin({ filename: 'order_tracking.html', title: "wade", template: 'src/pug/order_tracking.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
             new HtmlWebpackPlugin({ filename: 'cart_list.html', title: "wade", template: 'src/pug/cart_list.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
             new HtmlWebpackPlugin({ filename: 'cart_check.html', title: "wade", template: 'src/pug/cart_check.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
             new HtmlWebpackPlugin({ filename: 'cart_done.html', title: "wade", template: 'src/pug/cart_done.pug', inject: "body", chunks: ['index']/*, meta: metas, ...propertys }*/ }),
-           
+
             new MiniCssExtractPlugin({
-                filename: 'css/[name].[hash].css',
+                //filename: 'css/[name].[hash].css',
+                filename: 'css/[name].css',
                 chunkFilename: "[id].css",
             }),
 

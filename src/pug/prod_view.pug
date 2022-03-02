@@ -5,6 +5,8 @@ html
   include ./comp/header.pug
   body
     +nav("prod")
+
+    +sideBanner('商品', '' ,'./images/prodBanner.jpg')
     
     div.blocker.block-2-1.top
       div.content.LR.prod
@@ -12,33 +14,40 @@ html
           +gallery('prod', 'prod')
         div 
           section 
-            h3 銅鑼窯 柴燒小茶杯(單杯) cup 
+            h3 唐婆醋/愛吃醋禮盒
             hr              
-            p 以手拉坯成型，上釉後燒製瓦斯窯燒至1200度以上。以手拉坯成型，上釉後燒製瓦斯窯燒至1200度以上。以手拉坯成型，上釉後燒製瓦斯窯燒至1200度以上。以手拉坯成型，上釉後燒製瓦斯窯燒至1200度以上。
-            P 因釉色變化大，使每個杯子顏色呈現不同風貌(圖片僅供參考) 。  因釉色變化大，使每個杯子顏色呈現不同風貌(圖片僅供參考) 。 因釉色變化大，使每個杯子顏色呈現不同風貌(圖片僅供參考) 。 
+            p 「唐婆醋」是藝術、人文、科技的結晶。唐婆以微生物遗傳工程學碩士的專業背景,在好山好水韭充滿藝術氣息的氛圍裡培養醋酸菌。
+            p 抱持著做給家人喝的愛心,均使用安全優質的天然食材,並運用「二次發酵」技術釀醋,歷經長時間的熟成,發酵成較小的分子,口感溫順、養素容易被人體吸收,是純天然釀造的健康好醋。
           div
-            span.money NT$ 1,999 
-            a(href="./cart_list").btn.red.buy 我要購買
+            span.money NT$ 1,180 
+            a(href="./cart_list").btn.main.fill.buy 我要購買
 
     div.blocker.bgShop
       div.content.underLine.LR.reverse
         div
           div.photo
-            img( loading="lazy" src=imgPath+"photo1.jpg") 
+            img( loading="lazy" src=imgPath+"prod-3.jpg") 
         div
           section 
             div.title.left
-              span.red lo ieuˇ congˇ
               h2 產品說明
               ul 
-                li 尺寸：約長3.5 寬 3.5 高3cm
-                li 材質：陶
-                li 出貨包裝尺寸：一組/一杯+一盒
-                li 出貨規格：8*6*6cm
-                li 產地：台灣設計
+                li 商品組合/規格：500ml
+                li 商品品名：唐婆醋 柑橘醋
+                li 商品重(容)量：500ml
+                li 內容物成分(如含有豬、牛成分請加註國別)：
+                li 食品添加物名稱：無
+                li 原產地(國)：台灣
+                li 製造廠商或國內負責廠商名稱：唐婆食品行
+                li 製造廠商或國內負責廠商地址：苗栗縣頭份市流東里 3鄰37之1號
+                li 製造廠商或國內負責廠商電話：02-26743332
+                li 以消費者收受日算起，至少距有效日期前?日以上：依外包裝為主
+                li 食品業者登錄字號：F-199478856-00000-9
+                li 投保產品責任險字號：80-109-07122052-00009-PDL
+                
       
     div.blocker.bgShop
       div.content
-        a.btn.red(href="./guide.html") 回上頁
+        a.btn.main(href="./prod.html") 回上頁
 
     include ./comp/footer.pug

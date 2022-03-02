@@ -4,79 +4,86 @@ html
   include ./comp/header.pug
   body    
     +nav()
+    +sideBanner('訂單查詢', '' ,'./images/storyBanner.jpg')
    
-    div.blocker.top           
+    div.blocker.top.white            
       div.content.autoHight
-        div.pageTitle 
-          h1 預約管理 
-            
-            div.row.cart_title
-              div.col-xl-6.d-none.d-xl-block.text-center 商品
-              div.col-xl-2.d-none.d-xl-block.text-end 數量
-              div.col-xl-3.d-none.d-xl-block.text-end 小計
-              div.col-xl-1.d-none.d-xl-block.text-center 刪除
+        
+        div.box.personal
+          div.forms
+            div.card.mb-4.w-100
+              div.card-header.p-4
+                div.mb-2 已完成訂購！本次購物訂單編號
+                div.tag_list.mb-2
+                  a.item.big DUPAPS20221220152724024 
+                ul.mb-0
+                  li 付款方式 : 超商取貨付款
+                  li 付款狀態 : 已付款                
+              div.card-body
+                table.table.mb-0
+                  tbody
+                    tr
+                      td 依所需資料標題
+                      td 依所需資料列出
+                    tr
+                      td ATM繳費帳號
+                      td 銀行代碼 806，帳號 1234 12334 1234 1234
+                    tr
+                      td.border-0 繳費截止時間
+                      td.border-0 2022 / 06 / 18 23:59:59
 
-            - var n = 0
-            while n < 4
-              div.row.cart_item(data-loop=n++)
-                a.del.d-block.d-sm-none(href="#")
-                  i.fa.fa-trash(aria-hidden="true")
-                div.col-xl-2.col-sm-2
-                  a.cart_list.pop_btn(href="#", data-pagename="shop_view")
-                    div
-                      img(src="images/demo/p1.jpg", alt="")
-                
-                div.col-xl-4.col-sm-4
-                  a.cart_list.name.pop_btn(href="", data-pagename="shop_view") 幸福繽紛盒
-                    div.price NT$ 
-                      b 200
-                    
-                div.col-xl-2.col-sm-2.col-12.text-end
-                  div.quantity-row
-                    div.button_icon
-                      i.fa.fa-minus(aria-hidden="true")
-                    input.quantity_item(type="text" value="2" class="")
-                    div.button_icon
-                      i.fa.fa-plus(aria-hidden="true")
-                
-                div.col-xl-3.col-sm-3.text-end.total_list
-                  span.total( data-name="小計")
-                    div.price NT$ 
-                      b 160
-
-                div.col-xl-1.col-sm-1.text-center
-                  a.del.d-none.d-sm-inline-block(href="#")
-                    i.fa.fa-trash(aria-hidden="true")
+            div.row.cart_item
+              div.col-xl-2.col-sm-2
+                a.cart_list.pop_btn(href="#", data-pagename="shop_view")
+                    - var img = `background-image:url(./images/shop1.jpg)`
+                    div.thumb(style=img)
               
+              div.col-xl-6.col-sm-6
+                a.cart_list.name 柴燒小茶杯
+                  div NT$ 
+                    b.price 1,999
+                  span 數量:2
 
-            div.shopping_total
-              div.total_1.row
-                div.col-sm-9.col-9.text-end 共 
-                  span 6
-                    | 件 &nbsp; 商品金額                
-                div.col-sm-2.col-3.text-end.price NT$ 
-                  span.amount 3,160
-                    
-              div.total_1.row
-                div.col-sm-9.col-9.text-end XX折扣
-                div.col-sm-2.col-3.text-end - NT$ 
-                  span.discount 200
+              div.col-xl-3.col-sm-3.text-end.total_list
+                span.total(data-name="小計")
+                  div NT$ 
+                    b.price 3,998
+              div.col-xl-1.col-sm-1.text-center
+
+
+              div.shopping_total
+                div.total_1.row
+                  div.col-sm-9.col-9.text-end 共 
+                    span 2 
+                    | 件 &nbsp; 商品金額
                 
-              div.total_2.row
-                div.col-sm-9.col-9.text-end 總計
-                div.col-sm-2.col-3.text-end NT$ 
-                  span.final_amount 3,260
+                  div.col-sm-2.col-3.text-end NT$ 
+                    span.amount 3,998
               
+                div.total_1.row
+                  div.col-sm-9.col-9.text-end 運費
+                  div.col-sm-2.col-3.text-end NT$ 
+                    span.discount 120
+
+                div.total_1.row
+                  div.col-sm-9.col-9.text-end XX折扣
+                  div.col-sm-2.col-3.text-end - NT$ 
+                    span.discount 20
+
+                div.total_2.row
+                  div.col-sm-9.col-9.text-end 總計
+                  div.col-sm-2.col-3.text-end NT$ 
+                    span.final_amount 4,098
+
             div.more_bar.center.py-2.py-xl-4
-              a.btn_send.ileft.c1( href="shop.html") 繼續購物 
-                i.fa.fa-shopping-cart(aria-hidden="true")
-              a.btn_send( href="./cart_check.html") 填寫資料
-                i.fa.fa-chevron-right(aria-hidden="true")
-					
+            a.btn_send.btn.red( href="./index.html") 
+              | 返回
+
           div.menus
              ul
                 li
-                  a(href="personal.html") 個人資料維護
+                    a(href="personal.html") 個人資料維護
                 li
-                  a(href="reserve.html") 預約管理
+                    a(href="reserve.html") 預約管理
+    
     include ./comp/footer.pug

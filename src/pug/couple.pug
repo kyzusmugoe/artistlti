@@ -1,0 +1,47 @@
+include ./comp/config.pug
+
+doctype html
+html
+  include ./comp/header.pug
+  body    
+    +nav("couple")
+    +sideBanner('唐鴉與唐婆', '' ,'./images/coupleBanner.jpg')
+
+    div.bg1
+      div(class="blocker block-2-1 underLine" )
+        div(class="content LR reverse") 
+          div
+            div(class="photo left ")
+              img( loading="lazy" src=imgPath+"couple-1.jpg") 
+          div
+            section 
+              div.title.left
+                span.red 關於
+                h2 賴唐鴉
+              p 1962年生於台灣苗栗頭份水流東客家庄，國立藝專美術科畢業。曾任「上層窯」廠長，現任「賴唐鴉家庭美術館」館長及「台灣藝術生活化教育學會」理事長。曾獲和成陶藝「金陶獎」銅獎及北美展優選等獎項，創作領域包括書法、篆刻、木刻、陶藝及裝置藝術等。1996年在三峽白雞山成立「采陶窯」，2000年成立「白雞山家庭美術館」，2006年進一步成立「台灣藝術生活化教育學會」，致力推廣「生活藝術化，藝術生活化」理念，主張讓「家」也能變成生活與創作的美術館，並透過藝術介入社區的方式推動社區再造，是倡導「生活美學」的創作者與實踐家。
+
+    div(class="blocker block-2-2 underLine")
+        div(class="content  LR ") 
+          div
+            div(class="photo right")
+              img( loading="lazy" src=imgPath+"couple-2.jpg") 
+          div
+            section
+              p 2016年，唐鴉搬回頭份水流東老家，接手父親遺留下的柑橘園，也同時將「家庭美術館」的概念帶回故鄉，重新打造居家周遭環境，並以「半農半ｘ」的生活型態，一方面以友善環境、無毒栽培的理念照顧果園，一方面也繼續從事藝術創作，並與家鄉夥伴共同推動社區再造。
+    
+    div(class="blocker block-2-3 ")
+        div(class="content  LR reverse") 
+          div
+            div(class="photo right")
+              img( loading="lazy" src=imgPath+"couple-3.jpg") 
+          div
+              p 長期關懷生態環境的賴唐鴉，是國內第一位使用「水庫淤泥」創作的藝術家，他將原本是水庫殺手的庫底淤泥化作一件件藝術創作，企圖藉此強烈喚醒人們對土地與自然的尊重；他以八八風災土石混合石門水庫淤泥捏塑燒製的作品《祈福》，獲得「2010台灣OTOP設計大賞」的肯定。而《種》系列及《蛹》系列作品，則是根植於土地與生命的創作，可說是唐鴉透過長時間的自然環境觀察，與土地進行的一場場生態對話。
+    include ./comp/footer.pug
+    
+
+
+
+
+    
+    
+    

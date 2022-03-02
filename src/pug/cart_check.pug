@@ -37,15 +37,15 @@ html
                     div.thumb(style=img)
               
               div.col-xl-6.col-sm-6
-                a.cart_list.name 大吉大利幸福禮盒
+                a.cart_list.name 唐婆醋/愛吃醋禮盒
                   div NT$ 
-                    b.price 200
+                    b.price 1,180
                   span 數量:2
 
               div.col-xl-3.col-sm-3.text-end.total_list
                 span.total(data-name="小計")
                   div NT$ 
-                    b.price 400
+                    b.price 2,360
               div.col-xl-1.col-sm-1.text-center
 
          
@@ -56,7 +56,7 @@ html
                   | 件 &nbsp; 商品金額
               
                 div.col-sm-2.col-3.text-end NT$ 
-                  span.amount 1,999
+                  span.amount 2,360
             
               div.total_1.row
                 div.col-sm-9.col-9.text-end 運費
@@ -71,7 +71,7 @@ html
               div.total_2.row
                 div.col-sm-9.col-9.text-end 總計
                 div.col-sm-2.col-3.text-end NT$ 
-                  span.final_amount 4.098
+                  span.final_amount 2.460
 
             
             div.shopping_recipient
@@ -203,10 +203,10 @@ html
                         textarea.form-control(rows="3" placeholder="留言...")
 
           div.more_bar.center.py-2.py-xl-4
-            a.btn_send.btn.sub( href="./cart_list.html") 
+            a.btn_send.btn.main.leftIcon( href="./cart_list.html") 
               i.fa.fa-chevron-left(aria-hidden="true")
               | 上一步 
-            a.btn_send.btn.red.fill( href="./cart_done.html") 付款
+            a.btn_send.btn.main.rightIcon.fill( href="./cart_done.html") 付款
               i.fa.fa-chevron-right(aria-hidden="true")
 
     include ./comp/footer.pug

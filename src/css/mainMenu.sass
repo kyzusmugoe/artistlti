@@ -28,12 +28,15 @@
         ul
             li
                 margin-right: 40px
+
                 a
                     color: $fontColor
                     text-decoration: none
                     transition: .3s
-                    font-weight: 500
-                    position: relative                            
+                    font-weight: 100
+                    position: relative  
+                    white-space: nowrap
+
                     &::after
                         transition: .3s
                         position: absolute
@@ -45,7 +48,7 @@
                         height: 3px  
                     
                 a:hover, a.on                            
-                    color: $mainColor
+                    color: $fontHoverColor
                     position: relative
                         
         @include lg 

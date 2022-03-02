@@ -33,6 +33,13 @@
             @include xl()
                 padding-left: 0
                 padding-right: 0
+        .title
+            width: 100%
+            max-width: calc(1200px - 30px)
+
+        .endFull
+            width: 100%
+            max-width: calc(1200px - 30px)
         
         .content
             @include flexbox(column, flex-start , center)
@@ -174,29 +181,193 @@
                 margin: 40px 0
                 //@include flexbox(row, flex-start , center)
                 @include flexbox(row, center, center)
+                z-index: 10
             
-            .prodList
-                @include flexbox(row, flex-start, flex-start)
-                flex-wrap: wrap
-                gap: 10px
-                .box
-                    @include flexbox(row, center, flex-end)
-                    background-position: center
-                    background-size: cover
-                    flex-basis: calc(33.33% - 10px)
-                    height:380px
-                    .txt
-                        @include flexbox(row, center, center)
-                        width: 100%
-                        background-color: #fff
-                        padding:10px
-                    &:nth-child(1), &:nth-child(2)
-                        flex-basis: calc(50% - 10px)
-                        height:350px
+
+            .prodBox
+                overflow-x: scroll
+                width: 100%
+                margin-bottom: 25px
+
+                .prodList
+                    @include flexbox(row, flex-start, flex-start)
+                    flex-wrap: wrap
+                    gap: 10px
+                    margin-bottom: 30px
+                    
+                    @include md()
+                        width: fit-content
+                        flex-wrap: nowrap
+                    .box
+                        @include flexbox(column, center, flex-end)                        
+                        flex-basis: calc(33.33% - 10px)
+                        position: relative
+                        overflow: hidden
+                        .icon
+                            @include flexbox(row, center, center)   
+                            z-index: 10
+                            top:5px
+                            right:5px
+                            position: absolute
+                            background-color: $mainColor 
+                            width: 30px
+                            height: 30px
+                            transition: .4s
+                            svg
+                                color:#fff
+                            &:hover, &:active
+                                background-color: $subColor
+                                color:#fff
+                        .pic
+                            width: 100%
+                            padding-bottom: 100%
+                            position: relative
+                            background-position: center
+                            background-size: cover
+                            transition: .8s
+                            &:hover
+                                transform: scale(1.1)
+
+
+                        .txt
+                            z-index: 10
+                            color: $fontDarkColor
+                            @include flexbox(column, center, center)
+                            width: 100%
+                            background-color: #fff
+                            padding:10px
+                        &:nth-child(1), &:nth-child(2)
+                            flex-basis: calc(50% - 10px)
+                            .pic
+                                padding-bottom: 60%
+                            .txt, .icon
+                                display: none
+                            @include md()
+                                display: none
+                        @include md()
+                            flex-basis: auto
+                            width: 250px
+                            height: 400px
                 
                     
+            .eventBox
+                overflow-x: scroll
+                width: 100%
+                margin-bottom: 25px
+                z-index: 1
+                .eventList
+                    @include flexbox(row, flex-start, flex-start)
+                    flex-wrap: wrap
+                    gap: 10px
+                    margin-bottom: 30px
+                    @include md()
+                        width: fit-content
+                        flex-wrap: nowrap
                     
-                
+            
+                    .box
+                        @include flexbox(column, center, flex-end)
+                        position: relative
+                        flex-basis: calc(33.33% - 10px)
+                        overflow: hidden
+
+                        .signUp 
+                            position: absolute
+                            top: 0
+                            left: 0
+                            z-index: 10
+                            color: white
+                            padding: 5px 10px
+                            background-color: $subColor
+                        .pic
+                            width: 100%
+                            padding-bottom: 120%
+                            position: relative
+                            background-position: center
+                            background-size: cover
+                            transition: .8s
+                            &:hover
+                                transform: scale(1.1)
+                        .txt
+                            position: absolute
+                            bottom: 0
+                            color: $fontDarkColor !important
+                            @include flexbox(column, center, center)
+                            width: 100%
+                            padding:10px
+                            z-index: 10
+                            font-family: Open Sans
+                            font-size: 14px
+                            font-style: normal
+                            font-weight: 400
+                            line-height: 19px
+                            letter-spacing: 0em
+                            text-align: center
+
+                            .main
+                                font-family: Noto Serif TC
+                                font-size: 20px
+                                font-style: normal
+                                font-weight: 100
+                                line-height: 35px
+                                letter-spacing: 0em
+                                text-align: center
+
+                        &:nth-child(1)
+                            flex-basis: calc(100% - 10px)
+                            .pic
+                                padding-bottom: 30%
+                            .txt, .signUp 
+                                display: none
+                            @include md()
+                                display: none 
+                        &::before 
+                            content: " "
+                            background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.5))
+                            height: 100%
+                            position: absolute
+                            width: 100%
+                            pointer-events: none
+                            z-index: 1
+                            transition: .8s
+
+                        &:hover::before 
+                            background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.8))
+                        @include md()
+                            flex-basis: auto
+                            width: 250px     
+            
+            .personal
+                width: 100%
+                @include flexbox(row, center, flex-start)
+                .forms, .menus
+                    width:100%
+                .forms
+                    max-width: 800px
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                .menus
+                    max-width: 200px                     
+                    ul, li
+                        margin:0
+                        padding:0
+                    li
+                        list-style: none
+                        padding-bottom: 5px
+                        margin-bottom: 10px
+                        border-bottom: 1px solid #eee            
+                    a
+                        text-decoration: none
+                        color:#999
+                        &:hover
+                            color:$mainColor
+                    a.on
+                        color:$mainColor
+
+                    @include lg()
+                        display: none
                         
             @include contentSwiper()      
 

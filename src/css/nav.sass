@@ -4,25 +4,41 @@
         width: 100%
         height: 60px
         @include lg()
-            height: 60px            
-        background-color: #fff
+            height: 60px
+        background-color: rgba(0,0,0,.5)
         display: flex
         justify-content: center
+
         > .navContainer
+            
             display: flex
             justify-content: space-between
             align-items: center
             height: 100%
             width: 100%
-            max-width: $maxWidth         
+            max-width: $maxWidth
+            
             > div
                 height: 45px
             div.leftBox
+                @include flexbox(row, center , center)
                 .logo
                     width: 100%
                     height: 100%
                     max-width: 180px
                     margin-left: 18px
+                .logoTxt
+                    color:#fff
+                    font-family: Noto Serif TC
+                    font-size: 20px
+                    font-style: normal
+                    font-weight: 300
+                    line-height: 29px
+                    letter-spacing: 0.2em
+                    text-align: center
+                    @include xl()
+                        margin-left: 15px
+
             div.rightBox
                 display: flex
                 align-items: center
@@ -30,54 +46,56 @@
                 @include lg()
                     margin-right: 8px
                 svg
-                    color:$iconColor
+                    color: $iconColor
                     width: 24px
                     font-size: 1.45em
                 .menuIcon
                     width: 50px
                     display: flex
                     justify-content: center
-                    align-items: center    
+                    align-items: center
                     img
                         width: 100%
                         max-width: 30px
                 >div.kart
                     position: relative
                     span.counter
-                        color:#fff
+                        color: #fff
                         position: absolute
-                        background-color: $mainColor
-                        border-radius: 15px 
+                        background-color: $subColor
+                        border-radius: 15px
                         left: 0
                         bottom: -10px
                         padding: 3px
                         line-height: 1em
                 /*
-                    .menuIcon.on svg
-                        position: relative
-                    .menuIcon.on svg
-                        transition: .4s
-                    .menuIcon.on svg
-                        color:#fff
-                        background-color: $mainColor
-                        border-radius: 10px
-                        padding: 3px
-                
+                 .menuIcon.on svg
+                 position: relative
+                 .menuIcon.on svg
+                 transition: .4s
+                 .menuIcon.on svg
+                 color:#fff
+                 background-color: $mainColor
+                 border-radius: 10px
+                 padding: 3px
 
-                div.m_toggle, div.k_menu 
+                div.m_toggle, div.k_menu, div.fb
                     display: flex
                     justify-content: center
                     position: relative
                     width: 50px
-                div.m_toggle svg, div.k_menu svg
+                div.m_toggle svg, div.k_menu svg, div.fb
                     transition: .4s
 
-
                 div.m_toggle.on svg, div.k_menu.on svg
-                    color:#fff
+                    color: #fff
                     background-color: $mainColor
                     border-radius: 10px
                     padding: 3px
+
+                div.fb
+                    svg
+                        margin-top: 5px
 
                 >div.m_menu
                     cursor: pointer
@@ -88,19 +106,16 @@
                         flex-direction: column
                         justify-content: space-between
                         div
-                            background-color: $mainColor
+                            background-color: $fontColor
                             width: 30px
                             height: 3px
-                            transition: transform .3s ease  
+                            transition: transform .3s ease
                             transform: rotate(0) translate(0, 0)
                 div.m_menu.on
-                    
+
                     div:nth-child(1)
                         transform: rotate(45deg) translate(10px, 5px)
                     div:nth-child(2)
-                         transform: translate(50px,0 )
+                        transform: translate(50px,0 )
                     div:nth-child(3)
                         transform: rotate(-45deg) translate(10px, -5px)
-
-
-    

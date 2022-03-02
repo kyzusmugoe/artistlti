@@ -3,17 +3,12 @@ include ./comp/config.pug
 doctype html
 html
   include ./comp/header.pug
+  
 
   body
     +nav("prod") 
-
-    div.sideBanner
-      div.content.PS(data-speed="1.5" data-distance="80")
-        img.preload(src="./images/prodBanner.jpg" loading="lazy" rel="preload" )
-      div.logo
-        span.white vunˇ congˋ songˊ pinˋ
-        h2 文創商品
-
+    +sideBanner('商品', '' ,'./images/prodBanner.jpg')
+    
     div.blocker.bgShop
       div.content
         div.cards
@@ -22,18 +17,17 @@ html
             div
               a(href="./prod_view.html")
                 figure.shop(data-loop=n++)  
-                  -var imgName = "shop"+ (n%4+1)+".jpg"
+                  -var imgName = "prod-"+ (n%3+3)+".jpg"
                   div.f-box(style={'background-image':'url('+imgPath+imgName+')'})            
                   div.icon
                     i.fa.fa-shopping-cart(aria-hidden="true")             
                   figcaption
                     
                     div.prodTitle
-                      span 柴燒小茶杯
-                        br
-                        |單杯 - 深藍釉
-                    p 以手拉坯成型，上釉後燒製瓦斯窯燒至1200度以上。 因釉色變化大，使每個杯子顏色呈現不同風貌 
-                    div.money NT$ 1,999
+                      span 唐婆醋/愛吃醋禮盒
+                    p 「唐婆醋」是藝術、人文、科技的結晶。唐婆以微生物遗傳工程學碩士的專業背景,在好山好水韭充滿藝術氣息的氛圍裡培養醋酸菌長時間的熟成,是純天然釀造的健康好醋。
+                    div.money NT$ 1,180
+
         
         div.footContainer
           include ./comp/pager.pug

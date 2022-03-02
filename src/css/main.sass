@@ -4,14 +4,17 @@ $mobile: 414px
 $blockerRadiusL: 100px
 $blockerRadiusS: 100px
 
-$fontColor: #000 
+$fontColor: #fff
+$fontHoverColor: #e49856
+
+$fontDarkColor: #464646 
 $mainColor: #2F3938 
 $subColor: #573313 
 $sub1Color: #F9F6ED 
 $sub2Color: #5C6A68 
 $mainColorBtnActive: #eb437b 
 $bgColor1: #ECE7DB  
-$iconColor: #573313 
+$iconColor: #fff 
 
 $hoverColor: #E55C20 
 /*global config end*/
@@ -34,6 +37,8 @@ $hoverColor: #E55C20
 @import './purchase.sass'
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;400;600&display=swap')
+
 
 /*init*/
 @mixin flexbox($direction, $justifyContent, $alignItems)
@@ -73,17 +78,17 @@ $hoverColor: #E55C20
 
 /* Track */
 ::-webkit-scrollbar-track 
-  border-radius: 3px
+  //border-radius: 3px
 
 /* Handle */
 ::-webkit-scrollbar-thumb 
   background: $mainColor
-  border-radius: 3px
+  //border-radius: 3px
 
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover 
-  background: $sub1Color
+  background: $subColor
 
 html, body
     height: 100%
@@ -135,10 +140,20 @@ body
         background:$mainColor url('images/bg1.jpg') center center no-repeat
         background-size: cover
         position: relative        
-        h2, p, span
+        h2, p, span, div
             color:#fff !important
-
-
+        
+        .leftSpace
+            margin-left: 150px
+            @include xl()
+                margin-left: 0
+        .txtBox
+            width: 100%
+            @include xl()
+                @include flexbox(row, center , center )            
+                section
+                    width: 600px
+        
         &::before
             content:" "
             position: absolute
@@ -148,6 +163,105 @@ body
             height:100%
             background-color: $mainColor
             opacity: .8
+
+        &.bottomSpace::after
+            width: 100%
+            height: 500px
+            background-color:#fff
+            content: " "
+            position: absolute
+            bottom: 0
+
+    .bg2
+        background:$mainColor url('../images/bg1.jpg') center center no-repeat
+        background-size: cover
+        position: relative        
+        
+        &::before
+            content:" "
+            position: absolute
+            top: 0
+            left: 0
+            width:100%
+            height:100%
+            background-color: #F9F6ED
+            opacity: .8
+
+    .txtSub
+        font-family: Noto Serif TC
+        font-size: 16px
+        font-style: normal
+        font-weight: 100
+        line-height: 30px
+        letter-spacing: 0.1em
+        text-align: left
+        margin-bottom: 30px
+
+    .txtMain
+        font-family: Noto Serif TC
+        font-size: 30px
+        font-style: normal
+        font-weight: 600
+        line-height: 43px
+        letter-spacing: 0.1em
+        text-align: left
+        margin-bottom: 30px
+
+    div.txtAMain 
+        font-family: Noto Serif TC
+        font-size: 20px
+        font-style: normal
+        font-weight: 600
+        line-height: 29px
+        letter-spacing: 0.1em
+        text-align: left
+        margin-bottom: 15px
+
+    div.txtA2Main
+        font-family: Noto Serif TC
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: 30px
+        letter-spacing: 0.1em
+        text-align: left
+        margin-bottom: 15px
+
+    div.txtASub
+        font-family: Microsoft JhengHei
+        font-size: 15px
+        font-style: normal
+        font-weight: 400
+        line-height: 30px
+        letter-spacing: 0.1em
+        text-align: left
+        margin-bottom: 15px
+    
+    div.txtA2Sub
+        color:#666666
+        font-family: Microsoft JhengHei
+        font-size: 15px
+        font-style: normal
+        font-weight: 400
+        line-height: 30px
+        letter-spacing: 0.1em
+        text-align: justified
+        margin-bottom:15px 
+
+    .imgBox
+        overflow: hidden
+        position: relative
+        width: 100%
+        padding-bottom: 60%
+        max-height: 180px
+        margin-bottom: 15px
+        img
+            @include imgCover()        
+
+
+
+
+
         
 
 
@@ -168,29 +282,21 @@ body
                 height: 100%
                 opacity: .1
                 z-index: 1
-                background-image: url('images/bg1-3.jpg')
+                background-image: url('../images/bg1-3.jpg')
                 background-size: 1500px auto
                 background-position: center 180%
                 background-repeat: no-repeat
-
-                
-        &.block-1-4           
+                               
         &.block-1-5   
-        &.block-s-1
-            height: 280px
-            margin-bottom: 100px    
-            @include xl()
-                height: auto
-                padding-bottom: 0            
-                margin-bottom: 0            
-            .content
-                min-height: 400px
-                @include xl()
-                    margin-top: -50px 
-            .photo
-                margin-top: -50px
 
-        &.block-2-1
+        &.block-2-2
+            .content
+                align-items: flex-start
+            
+    .panorava
+        width: 100%
+        img
+            @include imgCover()              
                 
         
     .gallery.main .swiperProdThumb

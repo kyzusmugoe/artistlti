@@ -19,7 +19,7 @@ import "../css/main.sass"
 import { library, dom, IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { faUser, faShoppingCart, faPhoneAlt, faPlus, faMinus, faTrash, faTimes, faHeart, faPlayCircle, faExpand, faChevronLeft, faChevronRight, faCreditCard } from '@fortawesome/free-solid-svg-icons'
 
-import { faFacebook, faInstagram, faYoutube, faLine, faTwitter, faApple, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faFacebookSquare, faInstagram, faYoutube, faLine, faTwitter, faApple, faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 import { init as initParallaxScrolling } from "./ParallaxScrolling"
 import Pager from "./Pager"
@@ -37,6 +37,7 @@ library.add(
     faTimes as IconDefinition,
     faHeart as IconDefinition,
     faFacebook as IconDefinition,
+    faFacebookSquare as IconDefinition,
     faInstagram as IconDefinition,
     faYoutube as IconDefinition,
     faLine as IconDefinition,
