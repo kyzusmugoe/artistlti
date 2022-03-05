@@ -1,3 +1,6 @@
+
+$blockFootetMarginTop: 44px
+
 @mixin blocker()    
     div.blocker
         position: relative
@@ -152,23 +155,9 @@
                     margin-bottom: 10px
                 &.left
                     align-items: flex-start
-                span
-                    font-family: Noto Serif TC
-                    font-size: 15px
-                    font-style: normal
-                    font-weight: 500
-                    line-height: 30px
-                    letter-spacing: 0.1em
-                    text-align: center
-                .main
-                    font-family: Noto Serif TC
-                    font-size: 21px
-                    font-style: normal
-                    font-weight: 400
-                    line-height: 28px
-                    letter-spacing: 0em
-                    text-align: left
-                    margin-bottom: 15px
+               
+
+               
 
                 .red
                     color: $mainColor     
@@ -178,31 +167,51 @@
                 
             .footer
                 width: 100%
-                margin: 40px 0
+                margin-top: $blockFootetMarginTop
                 //@include flexbox(row, flex-start , center)
                 @include flexbox(row, center, center)
                 z-index: 10
             
 
-            .prodBox
-                overflow-x: scroll
+            .prodBox               
                 width: 100%
-                margin-bottom: 25px
+                //margin-bottom: 25px
+                @include md()
+                    overflow-x: scroll
+                .prodBn
+                    @include flexbox(row, flex-start, flex-start)
+                    margin-bottom: 20px
+                    margin-right: -20px
+                    width: calc(100% + 20px)
+                    gap: 20px
+                    @include md()
+                        display: none
+                    .pic
+                        background-position: center
+                        background-size: cover
+                        position: relative
+                        width: calc(50% - 20px)
+                        padding-bottom: 25%
+                        
 
                 .prodList
-                    @include flexbox(row, flex-start, flex-start)
+                    /*
+                        @include flexbox(row, flex-start, flex-start)
+                    display: inline-flex
                     flex-wrap: wrap
-                    gap: 10px
-                    margin-bottom: 30px
+                    gap: 20px
+                    //margin-bottom: 30px
+                    width: calc(100% + 20px)
                     
                     @include md()
                         width: fit-content
                         flex-wrap: nowrap
                     .box
                         @include flexbox(column, center, flex-end)                        
-                        flex-basis: calc(33.33% - 10px)
+                        flex-basis: calc(33.33% - 20px)
                         position: relative
                         overflow: hidden
+
                         .icon
                             @include flexbox(row, center, center)   
                             z-index: 10
@@ -228,7 +237,6 @@
                             &:hover
                                 transform: scale(1.1)
 
-
                         .txt
                             z-index: 10
                             color: $fontDarkColor
@@ -236,30 +244,34 @@
                             width: 100%
                             background-color: #fff
                             padding:10px
-                        &:nth-child(1), &:nth-child(2)
-                            flex-basis: calc(50% - 10px)
-                            .pic
-                                padding-bottom: 60%
-                            .txt, .icon
-                                display: none
-                            @include md()
-                                display: none
+
+                        /*
+                            &:nth-child(1), &:nth-child(2)
+                                flex-basis: calc(50% - 10px)
+                                .pic
+                                    padding-bottom: 60%
+                                .txt, .icon
+                                    display: none
+                                @include md()
+                                    display: none
+                        
+
                         @include md()
                             flex-basis: auto
                             width: 250px
-                            height: 400px
+                            height: 320px
                 
                     
             .eventBox
                 overflow-x: scroll
                 width: 100%
-                margin-bottom: 25px
+                //margin-bottom: 25px
                 z-index: 1
                 .eventList
                     @include flexbox(row, flex-start, flex-start)
                     flex-wrap: wrap
                     gap: 10px
-                    margin-bottom: 30px
+                    //margin-bottom: 30px
                     @include md()
                         width: fit-content
                         flex-wrap: nowrap

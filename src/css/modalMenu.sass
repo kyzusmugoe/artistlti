@@ -6,7 +6,7 @@
         @include flexbox(column, center, center)
         top: 0
         position: fixed
-        background-color: rgba(0, 0, 0, .8)
+        //background-color: rgba(0, 0, 0, .8)
         opacity: 0        
         transform: translate3d(0, -120%, 0)        
         z-index: -1
@@ -29,8 +29,7 @@
             .close:hover
                 color: $mainColor 
 
-        div.box
-           
+        div.box           
             width: 100%
             @include md()
                 width: 90%
@@ -139,7 +138,6 @@
                             color:$mainColor
                             font-size: 2em
 
-
         .scrollBox
             max-height: 540px
             width: 100%
@@ -152,6 +150,17 @@
 
         .vertical
             @include flexbox(column, center, center)
+
+        &.on
+            z-index: 10
+        &.on::before
+            position: fixed
+            content: " "
+            width: 100%
+            bottom: -150%
+            height: 300%
+            background-color: rgba(0, 0, 0, .8)
+            z-index: -1
 
     div.kartMenu
         @include flexbox(column, flex-start, center)

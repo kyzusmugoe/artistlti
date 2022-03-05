@@ -94,16 +94,23 @@ export default (menus: menuObj[]) => {
                     }
                 })
             })
-
-            item.menu == ".mobile" &&
+            
+            //item.menu == ".mobile" &&
                 menu.addEventListener("click", (event: Event) => {
-                    if (event.target) {
-                        const _m: HTMLElement = event.target as HTMLElement;
+                    console.log(event.target == menu)
+                    if (event.target == menu) {
+                        //menu.classList.contains("on") &&
+                            menu.classList.remove('on')
+                        //menu.classList.contains("off") &&
+                            menu.classList.add('off')
+                        _t?.classList.remove('on')
+                        
+                        /*const _m: HTMLElement = event.target as HTMLElement;
                         if (_m.classList.contains("mobile")) {
                             _m.classList.remove('on')
                             _m.classList.add('off')
                             _t.classList.remove('on')
-                        }
+                        }*/
                     }
                 })
         }
