@@ -29,7 +29,8 @@
             .close:hover
                 color: $mainColor 
 
-        div.box           
+        div.box
+            position: relative       
             width: 100%
             @include md()
                 width: 90%
@@ -151,8 +152,7 @@
         .vertical
             @include flexbox(column, center, center)
 
-        &.on
-            z-index: 10
+        
         &.on::before
             position: fixed
             content: " "
@@ -160,6 +160,15 @@
             bottom: -150%
             height: 300%
             background-color: rgba(0, 0, 0, .8)
+            z-index: -1
+        
+        &.off::before
+            position: fixed
+            content: " "
+            width: 100%
+            bottom: -150%
+            height: 300%
+            background-color: rgba(0, 0, 0, 0)
             z-index: -1
 
     div.kartMenu
@@ -218,17 +227,20 @@
 
     div.kartMenu.on, div.modalMenu.on
         transition: 500ms ease
-        transform: translate3d(0, 0, 0)
+        transform: translateY(0)
         opacity: 1        
-        div.box            
-            transform: scaleY(1)
+        z-index: 10
+        /*
+            div.box            
+                transform: scaleY(1)
 
     div.kartMenu.off,  div.modalMenu.off
         transition: 300ms ease
-         transform: translate3d(0, -120%, 0)
-        opacity: 0
-        div.box
-            transform: scaleY(0)
+        transform: translateY(-120%)
+        opacity: .5
+        /*
+            div.box
+                transform: scaleY(0)
 
     
     

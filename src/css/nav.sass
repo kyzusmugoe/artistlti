@@ -9,8 +9,7 @@
         display: flex
         justify-content: center
 
-        > .navContainer
-            
+        > .navContainer            
             display: flex
             justify-content: space-between
             align-items: center
@@ -20,6 +19,7 @@
             
             > div
                 height: 45px
+
             div.leftBox
                 @include flexbox(row, center , center)
                 .logo
@@ -39,8 +39,7 @@
                     @include xl()
                         margin-left: 15px
                     @include xxl()
-                        font-size: 16px
-                    
+                        font-size: 16px                    
 
             div.centerBox
                 @include flexbox(row, center , center)
