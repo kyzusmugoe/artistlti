@@ -176,8 +176,28 @@
             .line1
                 @include flexbox(row, center, center )
 
+    .zoomImg
+        cursor: pointer
+        transform: scale(1)  !important
+        transition: transform .8s ease !important
+        -o-transition: transform 0.8s ease !important
+        -ms-transition: transform 0.8s ease !important
+        -moz-transition: transform 0.8s ease !important
+        -webkit-transition: transform 0.8s ease !important
+        &:hover
+            transform: scale(1.1) !important
 
-
+    .zoomBgImg
+        cursor: pointer
+        background-size: 100% !important
+        transition: background-size .8s ease !important
+        -o-transition: background-size 0.8s ease !important
+        -ms-transition: background-size 0.8s ease !important
+        -moz-transition: background-size 0.8s ease !important
+        -webkit-transition: background-size 0.8s ease !important
+        &:hover
+            background-size: 110% !important
+        
     
 @mixin icon()
     div.icon

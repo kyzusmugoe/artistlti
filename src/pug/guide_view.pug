@@ -5,7 +5,9 @@ html
   include ./comp/header.pug
   body
     +nav("guide")
-    div.blocker.top.underLine
+    +sideBanner('預約行程', '' ,'./images/guideBanner.jpg')
+
+    div.blocker.underLine
       div.content.LR.prod
         div.limit
           +gallery('prod', 'guide')

@@ -5,9 +5,9 @@ div.gallery(class=val)
             div.swiper-wrapper
                 - var n1 = 0;            
                 while n1 < 5
-                    div.swiper-slide(data-loop=n1++)      
+                    div.swiper-slide(data-loop=n1++) 
                         -var imgName = imgID+"_0"+ (n1%5 +1)+".jpg"
-                        img.preload(src=imgPath+"gallery/"+imgName loading="lazy" rel="preload")
+                        img.preload.pswp-btn(src=imgPath+"gallery/"+imgName, loading="lazy" rel="preload", data-pswpsrc=`${imgPath}gallery/${imgName}`)
             div.swiper-pagination
             
         div.swiper.swiperProdThumb
@@ -20,3 +20,5 @@ div.gallery(class=val)
     
     div.close 
         img(src="./images/close_w.svg" , alt="", srcset="", width=25, height=25)
+
+    include ./pswp.pug

@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal } from 'bootstrap';
+import fontawsome from './fontawsome';
+import photoSwiper from './photoSwiper';
 
 import flatpickr from "flatpickr";
 require("flatpickr/dist/themes/light.css");
@@ -16,43 +18,17 @@ import 'swiper/css/zoom';
 
 import "../css/main.sass"
 
-import { library, dom, IconDefinition } from '@fortawesome/fontawesome-svg-core'
-import { faUser, faShoppingCart, faPhoneAlt, faPlus, faMinus, faTrash, faTimes, faHeart, faPlayCircle, faExpand, faChevronLeft, faChevronRight, faCreditCard } from '@fortawesome/free-solid-svg-icons'
-
-import { faFacebook, faFacebookSquare, faInstagram, faYoutube, faLine, faTwitter, faApple, faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 import { init as initParallaxScrolling } from "./ParallaxScrolling"
 import Pager from "./Pager"
 
-initParallaxScrolling(document.querySelectorAll("div.PS") as NodeList)
+fontawsome();
 
-//font awsome
-library.add(
-    faUser as IconDefinition,
-    faShoppingCart as IconDefinition,
-    faPhoneAlt as IconDefinition,
-    faPlus as IconDefinition,
-    faMinus as IconDefinition,
-    faTrash as IconDefinition,
-    faTimes as IconDefinition,
-    faHeart as IconDefinition,
-    faFacebook as IconDefinition,
-    faFacebookSquare as IconDefinition,
-    faInstagram as IconDefinition,
-    faYoutube as IconDefinition,
-    faLine as IconDefinition,
-    faPlayCircle as IconDefinition,
-    faExpand as IconDefinition,
-    faTwitter as IconDefinition,
-    faApple as IconDefinition,
-    faGoogle as IconDefinition,
-    faPlayCircle as IconDefinition,
-    faExpand as IconDefinition,
-    faChevronLeft as IconDefinition,
-    faChevronRight as IconDefinition,
-    faCreditCard as IconDefinition
-)
-dom.i2svg()
+photoSwiper()
+
+
+
+initParallaxScrolling(document.querySelectorAll("div.PS") as NodeList)
 
 //datetimePicker
 flatpickr(".datetimePicker", {
@@ -126,7 +102,7 @@ const initGallery = (go: gallaryObj) => {
                 swiper: swiperProdThumb
             }
         });
-
+        /*
         go.zoom == "prod" &&
             swiperProd.on('doubleTap', function () {
                 gallery.classList.add('on')
@@ -139,7 +115,7 @@ const initGallery = (go: gallaryObj) => {
 
         close.addEventListener("click", (event: Event) => {
             gallery.classList.remove('on')
-        })
+        })*/
     }
 }
 

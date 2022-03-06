@@ -17,12 +17,12 @@ html
         div.content.LR 
           div
             div(class="photo left ")
-              img( loading="lazy" src=imgPath+"p1-1.jpg") 
+              img.zoomImg.pswp-btn( loading="lazy", src=imgPath+"p1-1.jpg", data-pswpsrc=`${imgPath+"p1-1.jpg"}`) 
+              
           div.txtBox
             section.leftSpace
               div.txtSub 一方生態盈溢、蟲鳴鳥叫的莊園，
                 br
-
                 | 還有一缸缸天然釀造的手工醋
               div.txtMain 美，就在日常生活的
                 br
@@ -33,7 +33,7 @@ html
           div.content.LR.reverse
             div
               div(class="photo right ")
-                img( loading="lazy" src=imgPath+"p1-2.jpg") 
+                img.zoomImg.pswp-btn( loading="lazy", src=imgPath+"p1-2.jpg", data-pswpsrc=`${imgPath+"p1-2.jpg"}`) 
             div.txtBox
               section
                 div.txtSub 只要邊角料就夠用了，人生沒有想賺大錢，肉幼仔就可以過得很好
@@ -51,8 +51,8 @@ html
           span 一缸缸的「唐婆醋」，是藝術、人文、科技的結晶.
         div.horiBox
           div.horiBn
-            div.pic(style=`background-image:url(${imgPath+"prod-1.jpg"})`) 
-            div.pic(style=`background-image:url(${imgPath+"prod-2.jpg"})`) 
+            div.pic.zoomBgImg.pswp-btn(data-pswpsrc=`${imgPath+"prod-1.jpg"}`, style=`background-image:url(${imgPath+"prod-1.jpg"})`) 
+            div.pic.zoomBgImg.pswp-btn(data-pswpsrc=`${imgPath+"prod-2.jpg"}`, style=`background-image:url(${imgPath+"prod-2.jpg"})`) 
           div.horiList
             - var n = 0;            
             while n < 3
@@ -75,7 +75,7 @@ html
             span 生活藝術化 藝術生活化
           div.eventBox
             div.eventBn
-              div.pic(style=`background-image:url(${imgPath+"event-1.jpg"})`)
+              div.pic.zoomBgImg.pswp-btn(data-pswpsrc=`${imgPath+"event-1.jpg"}`, style=`background-image:url(${imgPath+"event-1.jpg"})`) 
             div.eventList
               - var n = 0;            
               while n < 3
@@ -93,7 +93,7 @@ html
           div.footer
             a.btn.main.fill More
     
-
+    include ./comp/pswp.pug
     include ./comp/footer.pug
     
 

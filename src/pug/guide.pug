@@ -6,13 +6,13 @@ html
 
   body
     +nav("guide") 
-    +sideBanner('預約行程', 'cai ti liˊ iuˇ' ,'./images/guideBanner.jpg')
+    +sideBanner('預約行程', '' ,'./images/guideBanner.jpg')
 
     div.blocker.bgShop
       div.content
         div.cards
           - var n = 0;            
-          while n < 14
+          while n < 12
             div
               a(href="./guide_view.html")
                 figure.guide(data-loop=n++)  

@@ -5,7 +5,9 @@ html
   include ./comp/header.pug
   body
     +nav("artwork")
-    div.blocker.top.underLine
+    +sideBanner('陶藝與書畫', '' ,'./images/artworkBanner.jpg')
+
+    div.blocker.underLine
       div.content.LR.prod
         div.limit
           +gallery('prod', 'artwork')

@@ -12,7 +12,7 @@ html
         div.content.LR.reverse
           div
             div(class="photo left")
-              img( loading="lazy" src=imgPath+"p1-2.jpg") 
+              img.zoomImg.pswp-btn( loading="lazy", src=imgPath+"p1-2.jpg", data-pswpsrc=`${imgPath+"p1-2.jpg"}`)
           div.txtBox
             section
               div.txtAMain 喜酌人生的酸甘蜜甜
@@ -30,9 +30,9 @@ html
           div
             div(class="photo left")
               div.imgBox
-                img( loading="lazy" src=imgPath+"about-1.jpg") 
+                img.zoomImg.pswp-btn( loading="lazy", src=imgPath+"about-1.jpg", data-pswpsrc=`${imgPath+"about-1.jpg"}`)
               div.imgBox
-                img( loading="lazy" src=imgPath+"about-2.jpg") 
+                img.zoomImg.pswp-btn( loading="lazy", src=imgPath+"about-2.jpg", data-pswpsrc=`${imgPath+"about-2.jpg"}`)
           div.txtBox
             section
               div.txtA2Sub 車子緩緩駛近三峽白雞山上的這棟透天厝，要不是門前的大片彩色背板和佔據整面大門的向日葵和蜘蛛雕塑，很難讓人把這裡跟美術館聯想在一 起，不過這兒確實完全體現了藝術家賴唐鴉的理念──「生活藝術化，藝術生活化」。賴唐鴉和太太唐婆就住在這個白雞山家庭美術館裡，美，信手捻來！
@@ -46,7 +46,7 @@ html
           div
             div(class="photo left")
               div.imgBox
-                img( loading="lazy" src=imgPath+"about-3.jpg") 
+                img.zoomImg.pswp-btn( loading="lazy", src=imgPath+"about-3.jpg", data-pswpsrc=`${imgPath+"about-3.jpg"}`)
           div.txtBox
             section
               div.txtA2Sub 「我跟老闆說，你拿我的作品去給別人去複製沒有關係，我不想做重複的東西。」唐鴉腦海始終想著突破，於是他離開窯場，踏出獨立創作的路。「我覺得藝術是我療癒自己的過程。」習慣不斷自我審視的唐鴉，心中矛盾的小宇宙來自於覺得自己跟別人不一樣，對於藝術無師自通的直覺是其一，微跛的腳步，也是原因之一，那是他兩歲時高燒不退，染上小兒麻痺留下的印記。
@@ -63,9 +63,9 @@ html
           div
             div(class="photo left")
               div.imgBox
-                img( loading="lazy" src=imgPath+"about-4.jpg") 
+                img.zoomImg.pswp-btn( loading="lazy", src=imgPath+"about-4.jpg", data-pswpsrc=`${imgPath+"about-4.jpg"}`) 
               div.imgBox
-                img( loading="lazy" src=imgPath+"about-5.jpg") 
+                img.zoomImg.pswp-btn( loading="lazy", src=imgPath+"about-5.jpg", data-pswpsrc=`${imgPath+"about-5.jpg"}`)
           div.txtBox
             section              
               div.txtA2Sub  經常性胃痛的唐鴉，有一次喝了唐婆從生機飲食店帶回來的浸泡醋，想不到胃酸狀況紓緩很多，唐婆笑著說：「會開始釀醋，講白了，也是因為家裡哪經得起他每天喝有機店的醋啊！」於是為了唐鴉的胃，研究所專攻微生物遺傳工程的唐婆，開始學釀醋。二次發酵的手工醋先從釀酒開始，十幾年前為了找到天然無毒的水果來釀醋，夫妻倆不惜環臺兩圈，精選彰化的葡萄和臺東的梅子作為首釀醋，先經過幾個月到半年釀水果酒，接著餵養醋酸菌，再淬鍊一年，方能成醋， 這期間，一缸一缸的醋罈子可不是擺在一邊就好，還要不時打開它，憑著色香味，判斷它是不是餓了，然後立馬餵食水果酒，唐婆像照顧孩子般無微不至，讓醋寶貝們順應氣候慢慢熟成，不催促，沒有壓力。
@@ -75,6 +75,7 @@ html
           div.txtA2Sub 「我現在是靠老婆養！」不改幽默本色，唐鴉如是說。「現在真的是苦盡甘來了⋯」「有苦過嗎？」唐鴉半捉弄的搖晃唐婆的頭。看著這對夫妻，不禁莞爾，因為有了唐婆醋，唐鴉的藝術創作因此無後顧之憂而自在；而要是沒有藝術家對生活的隨性，也未必會有唐婆醋的精彩問世。「我們現在的日子就是顧好自己的生活，然後可以服務三峽的藝術家。」唐婆深知當一個創作者不容易，她希望能將兩人的心路歷程分享給三峽眾多的藝術家，如此，才能共好，也才能真正的將藝術生活化。
           div.txtAMain 唐鴉夫妻倆的山居歲月，就像唐婆釀的醋一樣，越陳越香，口感濃厚而回甘⋯⋯。
     
+    include ./comp/pswp.pug
     include ./comp/footer.pug
     
 
