@@ -36,9 +36,7 @@ html
                 img( loading="lazy" src=imgPath+"p1-2.jpg") 
             div.txtBox
               section
-                div.txtSub 只要邊角料就夠用了，人生沒有想賺大錢，肉幼仔
-                  br
-                  | 就可以過得很好
+                div.txtSub 只要邊角料就夠用了，人生沒有想賺大錢，肉幼仔就可以過得很好
                 div.txtMain 喜酌人生的
                   br
                   | 酸甘蜜甜
@@ -51,11 +49,11 @@ html
         div(class="title")
           span.main 商品
           span 一缸缸的「唐婆醋」，是藝術、人文、科技的結晶.
-        div.prodBox
-          div.prodBn
+        div.horiBox
+          div.horiBn
             div.pic(style=`background-image:url(${imgPath+"prod-1.jpg"})`) 
             div.pic(style=`background-image:url(${imgPath+"prod-2.jpg"})`) 
-          div.prodList
+          div.horiList
             - var n = 0;            
             while n < 3
               -var imgName = "prod-"+ (n%3 +3)+".jpg"
@@ -76,13 +74,18 @@ html
             span.main.event 導覽 / 預約
             span 生活藝術化 藝術生活化
           div.eventBox
+            div.eventBn
+              div.pic(style=`background-image:url(${imgPath+"event-1.jpg"})`)
             div.eventList
               - var n = 0;            
-              while n < 4
-                -var imgName = "event-"+ (n%5 +1)+".jpg"
+              while n < 3
+                -var imgName = "event-"+ (n%3 +1)+".jpg"
                 div.box(data-loop=n++)                 
                   div.pic(style=`background-image:url(${imgPath+imgName})`) 
-                  div.signUp 10/50
+                  if n == 1
+                    div.signUp.full 額滿
+                  else
+                    div.signUp 10/50
                   div.txt
                     span.main 木刻作品導覽!{n}
                     span 2022/01/30

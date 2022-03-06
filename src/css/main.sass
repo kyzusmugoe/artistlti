@@ -70,6 +70,10 @@ $hoverColor: #E55C20
     @media( max-width:414px )
         @content
 
+@mixin xxs()
+    @media( max-width:375px )
+        @content
+
 //主要
 ::-webkit-scrollbar 
     width: 8px
@@ -167,6 +171,9 @@ body
         &.bottomSpace::after
             width: 100%
             height: 500px
+            @include md()
+                height: 200px
+            
             background-color:#fff
             content: " "
             position: absolute
@@ -187,7 +194,6 @@ body
             background-color: #F9F6ED
             opacity: .8
 
-
     .imgBox
         overflow: hidden
         position: relative
@@ -201,6 +207,8 @@ body
     div.blocker                
         &.block-1-1
         &.block-1-2
+            .txtSub
+                max-width: 400px
         &.block-1-3
             background-color: $sub1Color
             position: relative
