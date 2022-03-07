@@ -42,8 +42,6 @@ html
                   | 酸甘蜜甜
                 a.btn.white More
 
-
-
     div.blocker.fitBorder.block-1-3
       div.content
         div(class="title")
@@ -57,7 +55,7 @@ html
             - var n = 0;            
             while n < 3
               -var imgName = "prod-"+ (n%3 +3)+".jpg"
-              div.box(data-loop=n++) 
+              a.box(href="./prod_view.html", data-loop=n++) 
                 div.icon
                   i.fa.fa-shopping-cart(aria-hidden="true")     
                 div.pic(style=`background-image:url(${imgPath+imgName})`) 
@@ -65,7 +63,7 @@ html
                   span.main 唐婆醋/愛吃醋禮盒!{n}
                   span.money NT$ 1,180
         div.footer
-            a.btn.main.fill More
+            a.btn.main.fill(href="./prod_view") More
 
     div.bg1.bottomSpace
       div.blocker.fitBorder.block-1-4
@@ -80,7 +78,7 @@ html
               - var n = 0;            
               while n < 3
                 -var imgName = "event-"+ (n%3 +1)+".jpg"
-                div.box(data-loop=n++)                 
+                a.box(href="./guide_view.html", data-loop=n++)                        
                   div.pic(style=`background-image:url(${imgPath+imgName})`) 
                   if n == 1
                     div.signUp.full 額滿
@@ -91,7 +89,7 @@ html
                     span 2022/01/30
                     span PM0200 ~ PM0600
           div.footer
-            a.btn.main.fill More
+            a.btn.main.fill(href="./guide.html") More
     
     include ./comp/pswp.pug
     include ./comp/footer.pug
