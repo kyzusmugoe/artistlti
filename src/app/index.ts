@@ -154,6 +154,21 @@ document.querySelectorAll(".mainMenu .left li a").forEach(item => {
     })
 })
 
+//img loader
+
+document.querySelectorAll(".imgLoader").forEach(img=>{
+    let imgDom:HTMLElement = img as HTMLElement
+    const styleReg= /\(\"(.+)\"\)/i
+    if(imgDom != null || imgDom !=undefined){
+        const imgPath:string = imgDom.style.backgroundImage.match(styleReg)?.[1] as string
+        let img  = new Image()
+        img.src = imgPath
+        img.addEventListener("load",(event)=>{
+            console.log("complete")
+        })
+    }
+})
+
 //Pager System
 const menus: menuObj[] = [
     { btn: ".m_menu", menu: ".mobile", group: [] },

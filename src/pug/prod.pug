@@ -18,7 +18,7 @@ html
               a(href="./prod_view.html")
                 figure.shop(data-loop=n++)  
                   -var imgName = "prod-"+ (n%3+3)+".jpg"
-                  div.f-box(style={'background-image':'url('+imgPath+imgName+')'})            
+                  div.f-box.imgLoader(style={'background-image':'url('+imgPath+imgName+')'})            
                   div.icon
                     i.fa.fa-shopping-cart(aria-hidden="true")             
                   figcaption
