@@ -13,6 +13,7 @@
        
         @include lg()
             margin-top: 60px
+            
 
         div.header
             width: 100%
@@ -163,6 +164,7 @@
             z-index: -1
         
         &.off::before
+            display: none
             position: fixed
             content: " "
             width: 100%
@@ -242,5 +244,13 @@
             div.box
                 transform: scaleY(0)
 
+    img.code
+        width: 100%
+        max-width: 200px
+        display: block
+        margin: 0 auto
     
+
+    div.formMenu
+        margin-top: 0
     
