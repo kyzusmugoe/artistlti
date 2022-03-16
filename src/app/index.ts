@@ -2,12 +2,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal } from 'bootstrap';
 import fontawsome from './fontawsome';
 import photoSwiper from './photoSwiper';
-
 import flatpickr from "flatpickr";
+import Swiper, { Pagination, Navigation, Controller, Thumbs, Lazy, Autoplay, EffectFade } from 'swiper';
+
 require("flatpickr/dist/themes/light.css");
-
-
-import Swiper, { Pagination, Navigation, Controller, Thumbs, Lazy, Autoplay, Zoom } from 'swiper';
 import 'swiper/scss';
 import 'swiper/scss/free-mode';
 import 'swiper/scss/navigation';
@@ -15,18 +13,13 @@ import 'swiper/scss/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/thumbs';
 import 'swiper/css/zoom';
-
+import "swiper/css/effect-fade";
 import "../css/main.sass"
-
-
 import { init as initParallaxScrolling } from "./ParallaxScrolling"
 import Pager from "./Pager"
 
-fontawsome();
-
+fontawsome()
 photoSwiper()
-
-
 
 initParallaxScrolling(document.querySelectorAll("div.PS") as NodeList)
 
@@ -40,16 +33,34 @@ flatpickr(".datetimePicker", {
 
 // init Swiper:
 const swiperBanner = new Swiper('.mainBanner .swiper', {
-    modules: [Pagination],
+    modules: [Pagination, Lazy, Autoplay, EffectFade],
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
     pagination: {
         el: '.swiper-pagination',
+        clickable: true  
     },
     lazy: true,
+    loop: true,
+    speed: 1000,
+    effect: "fade",
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction: false
+    }
 });
+
+//針對pagination微調位置
+document.addEventListener("scroll",()=>{
+    if( document.querySelector(".swiper-pagination") ){
+        let _p:HTMLDivElement =  document.querySelector(".swiper-pagination") as HTMLDivElement
+       _p.style.transform = `translateY(-${window.pageYOffset*0.1}px)`;
+    }
+})
+
+
 
 
 //對應contentSwiper.sass
@@ -62,6 +73,7 @@ const swiperShop = new Swiper('.swiper.shop, .swiper.event', {
     scrollbar: {
         el: ".swiper-scrollbar"
     },
+    
 });
 
 
