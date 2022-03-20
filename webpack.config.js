@@ -159,15 +159,17 @@ module.exports = (env, options) => {
                 chunkFilename: "[id].css",
             }),
 
+      
+
             new CopyPlugin({
                 patterns: [
                     { from: "./src/images", to: "images" },
-                    //{ from: "./src/css", to: "css" },
-                    //{ from: "./src/mov", to: "mov" },
-                    //{ from: "./src/js", to: "js" },
-                    // { from: "./src/fonts", to: "fonts" },
+                    { from: "./src/app/main.js", to: "js" },
+                    { from: "./src/app/swiper-bundle.min.js", to: "js" },
+                    { from: "./src/css/swiper-bundle.min.css", to: "css" }
                 ],
             }),
+            
             /* 轉 Webp 用的
             new ImageminWebpWebpackPlugin({
                 config: [{
